@@ -32,13 +32,14 @@ public class bst_print_leaf {
 		        for(int i=0;i<n;i++){
 		            root=insert(root,sc.nextInt());
 		        }
+		        System.out.println("non-leaf nodes");
 		        printLeaf(root);	        
 		    }
 			private static void printLeaf(Node root) {
 				// TODO Auto-generated method stub
 				if(root != null) {
 					printLeaf(root.left);
-					if(root.left == null && root.right == null)
+					if(root.left != null || root.right != null)
 						System.out.print(root.data+" ");
 					printLeaf(root.right);
 				}
